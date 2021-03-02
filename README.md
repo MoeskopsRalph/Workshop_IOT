@@ -1,7 +1,22 @@
 # Workshop_IOT
 
 ## Deel 1: Installeren en configureren Raspberry PI
-Alle uitleg hier plaatsen om de pi te verbinden met de wifi en eventueel de image te installeren voor thuis verder te kunnen gaan met het project.
+Om de Raspberry PI zero te kunnen gebruiken voor het IOT project moet eerst het Raspberry Pi operating system geïnstaleerd worden (1.1). Daarna moet de wifi op de PI geconfigureerd worden en het IP genoteerd worden zodat vanaf een andere pc ingelogd kan worden op de PI via SSH (1.2). **Als je de workshop volgt tijdens de demo kan je stap 1 overslaan (dit is reeds geïnstaleerd). Wil je het project bij je thuis nabouwen, dan moet je eerst stap 1 doornemen om het project te kunnen opbouwen**
+
+### 1.1: Installeren Raspberry Pi OS
+
+Om het project te kunnen bouwen moet het Raspberry PI operating system geïnstalleerd worden samen met enkele instaltie pakketen en er moeten ook enkele configuraties aangepast worden. Bij de PI die tijdens de workshop gebruikt wordt is dit reeds uitgevoerd. Om dit thuis ook te kunnen doen is er een image gamaakt die je gewoon op een SD kaart kan plaatsen. Hier zijn alle nodige configuraties al op uitgevoerd. 
+
+Download de image via deze link: **NOG VOORZIEN VAN LINK NAAR IMAGE** en installeer op je PC een image flasher zoals [Etcher](https://www.balena.io/etcher/). Gebruik voor het installeren van de image een sd kaart van minstens 16GB die volledig geformateerd mag worden. 
+
+Open nu het image flash programma dat je geïnstaleerd hebt en kies voor flash from file en selecteer de image die je zojuist gedownload hebt (Workshop_IOT.img) (1), kies bij select target de SD-kaart waar het programma op geplaatst mag worden (2) en kies ten slotte voor Flash (3).
+
+![Deel1_1](/Documentatie/Afbeeldingen/Deel1_1.jpg)
+
+Wanneer je de melding krijgt dat het flashen van de image succesvol afgerond is mag je de kaart verwijderen uit je PC en in de Raspberry PI Zero plaatsen. Stap 1.1 is nu succesvol afgerond. Je kan verder gaan met stap 1.2.
+
+### 1.2: Raspberry PI Zero verbinden met wifi en noteren IP-adres
+
 
 ## Deel 2: Aanmaken Discord BOT
 Om met de Raspberry te comuniceren moet op het Discord profiel eerst een BOT aangemaakt worden die gebruikt kan worden op de Raspberry PI. Deze moet vervolgens gekopeld worden aan een server. 
