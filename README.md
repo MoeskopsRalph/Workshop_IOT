@@ -42,3 +42,6 @@ Surf naar https://discordapp.com/oauth2/authorize?client_id=clientid&scope=bot&p
 ![Deel2_5](/Documentatie/Afbeeldingen/Deel2_5.jpg)
 
 Je moet eventueel nog bevestigen dat je geen Robot bent. Als je dit gedaan hebt ben je helemaal klaar met Deel2. Normaal zie je op de server nu de Bot staan die je hebt toegevoegd.
+ 
+## Referenties
+1. „Python: Create a Discord Bot on Your Raspberry Pi Using Discord.py,” The Ginger Ninja, 3 Mei 2017. [Online]. Available: https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi. [Geopend 28 Februari 2021].
