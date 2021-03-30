@@ -23,6 +23,28 @@ Als je de workshop volgt tijdens de demo of als je in Stap1.1 voor een image gek
 
 ### 1.3: Raspberry PI Zero instellen via script
 
+Open de terminal op de Raspberry PI door op het terminal icoontje te klikken of door gebruik te maken van de sneltots ctrl+alt+t
+![Deel1_3](/Documentatie/Afbeeldingen/Deel1_3.jpg)
+
+Via de terminal gaan we nu het script van GitHub downloaden zodat de Raspberry weet welke files geïnstalleerd moeten en hoe alles geconfigureerd moet worden.
+
+Geef onderstaand commando in om het script te downloaden: 
+```bash
+wget https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/AutoInstall.sh
+```
+
+Maak het script uitvoerbaar voor een snelle configuratie van AutoInstall:
+```bash
+chmod +x AutoInstall.sh
+```
+
+Start nu het script met onderstaand commando. Kijk hier bij wel na dat je het commando zeker start met sudo. Als je dit niet doet zal het script om een wachtwoord vragen. Als dit gebeurt geeft je ctrl+c in en start je het script opnieuw met sudo.
+```bash
+Sudo ./AutoInstall.sh
+```
+
+Als het script uitgevoerd is zal de Raspberry opnieuw opstarten. Stap 1.3 is nu succescvol uitgevoerd. Je kan nu verder gaan met Deel2.
+
 ## Deel 2: Aanmaken Discord BOT
 Om met de Raspberry te comuniceren moet op het Discord profiel eerst een BOT aangemaakt worden die gebruikt kan worden op de Raspberry PI. Deze moet vervolgens gekopeld worden aan een server. 
 
