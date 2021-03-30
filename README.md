@@ -89,4 +89,8 @@ Klik ten slotte rechts op de servernaam (1) en Kopieer ID (2).
 Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de server vanaf de Raspberry PI. Deel2 is nu volledig afgerond en je kan verder gaan met Deel3.
 
 ## Referenties
-1. „Python: Create a Discord Bot on Your Raspberry Pi Using Discord.py,” The Ginger Ninja, 3 Mei 2017. [Online]. Available: https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi. [Geopend 28 Februari 2021].
+1. „Introducing Raspberry Pi Imager, our new imaging utility” RaspberryPi, 5 Maart 2020. [Online]. Available: https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility. [Geopend 30 Maart 2021].
+2. „Python: Create a Discord Bot on Your Raspberry Pi Using Discord.py” The Ginger Ninja, 3 Mei 2017. [Online]. Available: https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi. [Geopend 28 Februari 2021].
+3. „DHT11 Temperature and Humidity Sensor and the Raspberry Pi” The Ginger Ninja, 21 September 2017. [Online]. Available: https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi. [Geopend 28 Februari 2021].
+4. „Getting started with the Camera Module” Projects RaspberryPi. [Online]. Available: https://projects.raspberrypi.org/en/projects/getting-started-with-picamera. [Geopend 10 Maart 2021].
+5. „The parent detector” Projects RaspberryPi. [Online]. Available: https://projects.raspberrypi.org/en/projects/parent-detector/3. [Geopend 15 Maart 2021].
