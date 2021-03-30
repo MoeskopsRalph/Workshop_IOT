@@ -27,7 +27,7 @@ Open de terminal op de Raspberry PI door op het terminal icoontje te klikken of 
 
 ![Deel1_3](/Documentatie/Afbeeldingen/Deel1_3.jpg)
 
-Via de terminal gaan we nu het script van GitHub downloaden zodat de Raspberry weet welke files geïnstalleerd moeten en hoe alles geconfigureerd moet worden.
+Via de terminal gaan we nu het script van GitHub downloaden zodat de Raspberry weet welke files geïnstalleerd moeten worden en hoe alles geconfigureerd moet worden.
 
 Geef onderstaand commando in om het script te downloaden: 
 ```bash
