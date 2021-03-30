@@ -84,7 +84,7 @@ Klik ten slotte rechts op de servernaam (1) en Kopieer ID (2).
 
 ![Deel2_8](/Documentatie/Afbeeldingen/Deel2_8.jpg)
 
-Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de server vanaf de Raspberry PI.
+Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de server vanaf de Raspberry PI. Deel2 is nu volledig afgerond en je kan verder gaan met Deel3.
 
 ## Referenties
 1. „Python: Create a Discord Bot on Your Raspberry Pi Using Discord.py,” The Ginger Ninja, 3 Mei 2017. [Online]. Available: https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi. [Geopend 28 Februari 2021].
