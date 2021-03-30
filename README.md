@@ -5,15 +5,9 @@ Om de Raspberry PI zero te kunnen gebruiken voor het IOT project moet eerst het 
 
 ### 1.1: Installeren Raspberry Pi OS
 
-Om het project te kunnen bouwen moet het Raspberry PI operating system geïnstalleerd worden samen met enkele instalatie pakketten en er moeten ook enkele configuraties aangepast worden. Bij de PI die tijdens de workshop gebruikt wordt is dit reeds uitgevoerd. Om dit thuis ook te kunnen doen is er een image gemaakt die je gewoon op een SD-kaart kan plaatsen. Hier zijn alle nodige configuraties al op uitgevoerd. 
+Om het project te kunnen bouwen moet het Raspberry PI operating system geïnstalleerd worden (op een SD-kaart van minstens 16GB die volledig geformateerd mag worden) samen met enkele instalatie pakketten. **Bij de PI die tijdens de workshop gebruikt wordt is dit reeds uitgevoerd. Om dit thuis ook te kunnen moet dit eerst nog op de SD-kaart geïnstalleerd worden.** Er zijn 2 opties voorzien om dit te doen. De eerste optie is om hier een geconfigureerde image te downloaden, deze te unzippen en te installeren via de [Raspberry Pi Imager](https://www.raspberrypi.org/software/). De tweede optie is om via de [Raspberry Pi Imager](https://www.raspberrypi.org/software/) het Raspberry PI OS te installeren op de SD-kaart en vervolgens via een script de juiste pakketten te installeren. Als je voor de 2de optie kiest moet je na stap 1.2 ook stap 1.3 volgen.
 
-Download de image via deze link: **NOG VOORZIEN VAN LINK NAAR IMAGE** en unzip de image. Installeer vervolgens image flasher op je PC zoals [Raspberry Pi Imager](https://www.raspberrypi.org/software/). Gebruik voor het installeren van de image een SD-kaart van minstens 16GB die volledig geformateerd mag worden. 
-
-Open nu het image flash programma dat je geïnstaleerd hebt en kies voor besturingssysteem (1) en selecteer de image (2) die je zojuist gedownload hebt (Workshop_IOT.img), kies bij opslagapparaat (3) de SD-kaart waar het programma op geplaatst mag worden (4) en kies ten slotte voor Scrhijf (5).
-
-![Deel1_1](/Documentatie/Afbeeldingen/Deel1_1.jpg)
-
-Wanneer je de melding krijgt dat het schrijven van de image succesvol afgerond is mag je de kaart verwijderen uit je PC en in de Raspberry PI Zero plaatsen. Sluit vervolgens het toetsenbord, muis en HDMI scherm aan. Stap 1.1 is nu succesvol afgerond. Je kan verder gaan met stap 1.2.
+Wanneer je de melding krijgt dat het schrijven van de image succesvol afgerond is mag je de kaart verwijderen uit je PC en in de Raspberry PI Zero plaatsen. Sluit vervolgens het toetsenbord, muis, camera en HDMI scherm aan. Stap 1.1 is nu succesvol afgerond. Je kan verder gaan met stap 1.2.
 
 ### 1.2: Raspberry PI Zero verbinden met wifi en noteren IP-adres
 
