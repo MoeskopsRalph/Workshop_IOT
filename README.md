@@ -41,7 +41,7 @@ chmod +x AutoInstall.sh
 
 Start nu het script met onderstaand commando. Kijk hier bij wel na dat je het commando zeker start met sudo. Als je dit niet doet zal het script om een wachtwoord vragen. Als dit gebeurt geeft je ctrl+c in en start je het script opnieuw met sudo.
 ```bash
-Sudo ./AutoInstall.sh
+sudo ./AutoInstall.sh
 ```
 
 Als het script uitgevoerd is zal de Raspberry opnieuw opstarten. Stap 1.3 is nu succescvol uitgevoerd. Je kan nu verder gaan met Deel2.
