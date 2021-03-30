@@ -24,6 +24,7 @@ Als je de workshop volgt tijdens de demo of als je in Stap1.1 voor een image gek
 ### 1.3: Raspberry PI Zero instellen via script
 
 Open de terminal op de Raspberry PI door op het terminal icoontje te klikken of door gebruik te maken van de sneltots ctrl+alt+t
+
 ![Deel1_3](/Documentatie/Afbeeldingen/Deel1_3.jpg)
 
 Via de terminal gaan we nu het script van GitHub downloaden zodat de Raspberry weet welke files geïnstalleerd moeten en hoe alles geconfigureerd moet worden.
