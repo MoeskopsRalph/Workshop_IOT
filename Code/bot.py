@@ -20,7 +20,7 @@ GPIO.setup(pir_sensor, GPIO.IN, GPIO.PUD_DOWN) #voor ruis weg te werken
 current_state = 0
 
 #Toegang token voor discord server
-TOKEN = 'ODIzMjA4NDc4MjU5NTQ0MDg0.YFdeow.yJoIuGALyRE-_nCfVoVbxF4Yxwg'
+TOKEN = 'TOKENHERE'
 description = '''raspberry in Python'''
 bot = commands.Bot(command_prefix='?', description=description)
 
