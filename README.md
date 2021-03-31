@@ -33,17 +33,17 @@ Via de terminal gaan we nu het script van GitHub downloaden zodat de Raspberry w
 
 Geef onderstaand commando in om het script te downloaden: 
 ```bash
-wget https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/AutoInstall.sh
+wget https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/install.sh
 ```
 
 Maak het script uitvoerbaar voor een snelle configuratie van AutoInstall:
 ```bash
-chmod +x AutoInstall.sh
+sudo chmod +x install.sh
 ```
 
 Start nu het script met onderstaand commando. Kijk hier bij wel na dat je het commando zeker start met sudo. Als je dit niet doet zal het script om een wachtwoord vragen. Als dit gebeurt geeft je ctrl+c in en start je het script opnieuw met sudo.
 ```bash
-sudo ./AutoInstall.sh
+sudo ./install.sh
 ```
 
 Als het script uitgevoerd is zal de Raspberry opnieuw opstarten. Stap 1.3 is nu succescvol uitgevoerd. Je kan nu verder gaan met Deel2.
