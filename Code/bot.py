@@ -6,6 +6,7 @@ import datetime
 import RPi.GPIO as GPIO
 import asyncio
 import Adafruit_DHT
+from subprocess import call 
 from picamera import PiCamera, Color
 
 
@@ -21,11 +22,18 @@ GPIO.setup(pir_sensor, GPIO.IN, GPIO.PUD_DOWN) #voor ruis weg te werken
 current_state = 0
 
 #Toegang token voor discord server
-TOKEN = 'TOKENHERE'
+TOKEN = 'TOKEN'
 description = '''raspberry in Python'''
 bot = commands.Bot(command_prefix='?', description=description)
 camera = PiCamera()
-camera.resolution=(2591,1944)
+def convert_video(file_h264, file_mp4):
+    # Record a 3 seconds video.
+    camera.start_recording(file_h264)
+    time.sleep(3)
+    camera.stop_recording()
+    # Convert the h264 format to the mp4 format.
+    command = "MP4Box -add " + file_h264 + " " + file_mp4
+    call([command], shell=True)
 
 #Stuurt "motion detected" bij beweging
 async def motionDetection():
@@ -40,10 +48,8 @@ async def motionDetection():
             if current_state == 1:
                 if not msg_sent:
                     await channel.send('Motion Detected')
-                    camera.start_recording('/home/pi/Desktop/IOT_Workshop/video.h264')
-                    sleep(5)
-                    camera.stop_recording()
-                    await channel.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.h264'))
+                    convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4')
+                    await channel.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.mp4'))
 
                     msg_sent = True
                 else:
@@ -59,6 +65,12 @@ async def foto(ctx):
     """Bij dit commando wordt er een foto gemaakt en doorgestuurd."""
     camera.capture('/home/pi/Desktop/IOT_Workshop/image.jpg')
     await ctx.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/image.jpg'))
+    
+@bot.command()
+async def video(ctx):
+    """Bij dit commando wordt er een video van 3 seconden gemaakt en doorgestuurd."""
+    convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4')
+    await ctx.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.mp4'))
 
 @bot.event
 async def on_ready():
