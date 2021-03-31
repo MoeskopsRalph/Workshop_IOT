@@ -17,4 +17,6 @@ raspi-config nonint do_camera 0
 mkdir ~/Desktop/IOT_Workshop
 cd ~/Desktop/IOT_Workshop
 touch Workshop.py
+chmod ugo+rwx ~/Desktop/IOT_Workshop
+chmod ugo+rwx ~/Desktop/IOT_Workshop/Workshop.py
 reboot
