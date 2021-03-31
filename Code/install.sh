@@ -14,9 +14,9 @@ python3 setup.py install
 systemctl enable ssh
 systemctl start ssh
 raspi-config nonint do_camera 0
-mkdir ~/Desktop/IOT_Workshop
-cd ~/Desktop/IOT_Workshop
+mkdir /home/pi/Desktop/IOT_Workshop
+cd /home/pi/Desktop/IOT_Workshop
 touch Workshop.py
-chmod ugo+rwx ~/Desktop/IOT_Workshop
-chmod ugo+rwx ~/Desktop/IOT_Workshop/Workshop.py
+chmod ugo+rwx /home/pi/Desktop/IOT_Workshop
+chmod ugo+rwx /home/pi/Desktop/IOT_Workshop/Workshop.py
 reboot
