@@ -38,7 +38,7 @@ wget https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/install.sh
 
 Maak het script uitvoerbaar voor een snelle configuratie van AutoInstall:
 ```bash
-sudo chmod +x install.sh
+chmod +x install.sh
 ```
 
 Start nu het script met onderstaand commando. Kijk hier bij wel na dat je het commando zeker start met sudo. Als je dit niet doet zal het script om een wachtwoord vragen. Als dit gebeurt geeft je ctrl+c in en start je het script opnieuw met sudo.
