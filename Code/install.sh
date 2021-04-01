@@ -15,6 +15,8 @@ systemctl enable ssh
 systemctl start ssh
 raspi-config nonint do_camera 0
 mkdir /home/pi/Desktop/IOT_Workshop
+sudo chmod 755 /home/pi/Desktop/IOT_Workshop
 cd /home/pi/Desktop/IOT_Workshop
 touch Workshop.py
+sudo chmod 644 /home/pi/Desktop/IOT_Workshop/Workshop.py
 reboot
