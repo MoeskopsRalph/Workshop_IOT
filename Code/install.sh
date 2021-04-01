@@ -1,4 +1,4 @@
-#!/bin/su root
+#!/bin/bash
 apt-get update -y 
 apt install python3-pip -y 
 apt install python3-cffi -y 
