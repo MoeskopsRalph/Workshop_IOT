@@ -88,6 +88,12 @@ Klik ten slotte rechts op de servernaam (1) en Kopieer ID (2).
 
 Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de server vanaf de Raspberry PI. Deel2 is nu volledig afgerond en je kan verder gaan met Deel3.
 
+## Deel 3: Schrijven code
+```bash
+wget -q https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/Workshop.py -O ~/Desktop/IOT_Workshop/Workshop.py
+```
+
+
 ## Referenties
 1. „Introducing Raspberry Pi Imager, our new imaging utility” RaspberryPi, 5 Maart 2020. [Online]. Available: https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility. [Geopend 30 Maart 2021].
 2. „Python: Create a Discord Bot on Your Raspberry Pi Using Discord.py” The Ginger Ninja, 3 Mei 2017. [Online]. Available: https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi. [Geopend 28 Februari 2021].
