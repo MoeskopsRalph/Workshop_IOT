@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/su root
 apt-get update -y 
 apt install python3-pip -y 
 apt install python3-cffi -y 
@@ -14,7 +14,4 @@ python3 setup.py install
 systemctl enable ssh
 systemctl start ssh
 raspi-config nonint do_camera 0
-mkdir ~/Desktop/IOT_Workshop
-cd ~/Desktop/IOT_Workshop
-touch Workshop1.py
 reboot
