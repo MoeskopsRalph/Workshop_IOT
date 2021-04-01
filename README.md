@@ -11,7 +11,7 @@ Om het project te kunnen bouwen moet het Raspberry PI operating system geïnstal
 
 Raadpleeg voor meer informatie over hoe de image te installeren de [website van Raspberry](https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility/). 
 
-Wanneer je de melding krijgt dat het schrijven van de image succesvol afgerond is mag je de kaart verwijderen uit je PC en in de Raspberry PI Zero plaatsen. Sluit vervolgens het toetsenbord, muis, camera, HDMI scherm en de sensoren aan (bouw je de workshop van thuis lees dan hier de hardware vereisten). Stap 1.1 is nu succesvol afgerond. Je kan nu verder gaan met stap 1.2.
+Wanneer je de melding krijgt dat het schrijven van de image succesvol afgerond is mag je de kaart verwijderen uit je PC en in de Raspberry PI Zero plaatsen. Sluit vervolgens het toetsenbord, muis, camera, HDMI scherm en de sensoren aan (bouw je de workshop van thuis lees dan [hier](../blob/main/Hardware/README.md) de hardware vereisten). Stap 1.1 is nu succesvol afgerond. Je kan nu verder gaan met stap 1.2.
 
 ### 1.2: Raspberry PI Zero verbinden met wifi en noteren IP-adres
 
