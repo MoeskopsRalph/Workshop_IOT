@@ -2,6 +2,7 @@
 apt-get update -y 
 apt install python3-pip -y 
 apt install python3-cffi -y 
+apt install -y gpac
 pip3 install discord.py[voice]
 python3 -m pip install -U discord.py[voice]
 apt-get install build-essential python-dev -y
