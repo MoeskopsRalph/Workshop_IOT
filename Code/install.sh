@@ -14,5 +14,5 @@ python3 setup.py install
 systemctl enable ssh
 systemctl start ssh
 raspi-config nonint do_camera 0
-mkdir –m777 ~home/pi/Desktop/IOT_Workshop
+mkdir –m777 ~/home/pi/Desktop/IOT_Workshop
 reboot
