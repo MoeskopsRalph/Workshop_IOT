@@ -9,31 +9,37 @@ import Adafruit_DHT
 from subprocess import call 
 from picamera import PiCamera, Color
 
+#Toegang token voor discord server
+TOKEN = 'TOKEN'
+description = '''IOT Workshop - Discord Bot'''
+bot = commands.Bot(command_prefix='?', description=description)
 
 #DHT declareren
 dht_sensor = Adafruit_DHT.DHT11
-gpio = 17 #GPIO voor dht sensor
+gpio = 18 #GPIO voor dht sensor
 
 #PIR declareren
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-pir_sensor = 26 #GPIO voor pir sensor
+pir_sensor = 24 #GPIO voor pir sensor
 GPIO.setup(pir_sensor, GPIO.IN, GPIO.PUD_DOWN) #voor ruis weg te werken
 current_state = 0
 
-#Toegang token voor discord server
-TOKEN = 'TOKEN'
-description = '''raspberry in Python'''
-bot = commands.Bot(command_prefix='?', description=description)
+#RELAIS declareren
+#GPIO21
+
+#CAMERA declaren + functie
 camera = PiCamera()
+camera.resolution = (640,480)
 def convert_video(file_h264, file_mp4):
-    # Record a 3 seconds video.
+    # Opnemen 3 seconde video
     camera.start_recording(file_h264)
     time.sleep(3)
     camera.stop_recording()
-    # Convert the h264 format to the mp4 format.
+    # Omzetten h264 formaat naa mp4 formaat
     command = "MP4Box -add " + file_h264 + " " + file_mp4
     call([command], shell=True)
+
 
 #Stuurt "motion detected" bij beweging
 async def motionDetection():
@@ -50,7 +56,8 @@ async def motionDetection():
                     await channel.send('Motion Detected')
                     convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4')
                     await channel.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.mp4'))
-
+                    commando = "rm " +"/home/pi/Desktop/IOT_Workshop/video.mp4"
+                    call([commando], shell=True)
                     msg_sent = True
                 else:
                     msg_sent = False
@@ -59,6 +66,13 @@ async def motionDetection():
         except KeyboardInterrupt:
             GPIO.cleanup()
         await asyncio.sleep(1)
+
+@bot.event
+async def on_ready():
+    print('Bot opgestart en ingelogd als:')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
 
 @bot.command()
 async def foto(ctx):
@@ -71,40 +85,31 @@ async def video(ctx):
     """Bij dit commando wordt er een video van 3 seconden gemaakt en doorgestuurd."""
     convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4')
     await ctx.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.mp4'))
-
-@bot.event
-async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('------')
-
-@bot.command()
-async def hello(ctx):
-    """Says world"""
-    #await ctx.send(file=discord.File('my_image.png'))
-    #await ctx.send(file=discord.File('video.mp4'))
-    await ctx.send("hello lord jesse")
-
-@bot.command()
-async def add(ctx, left : int, right : int):
-    """Adds two numbers together."""
-    await ctx.send(left + right)
+    commando = "rm " +"/home/pi/Desktop/IOT_Workshop/video.mp4"
+    call([commando], shell=True)
 
 @bot.command()
 async def meting(ctx):
-    """Meet luchtvochtigheid en temperatuur."""
-    await ctx.send("De temperatuur en luchtvochtigheid worden gemeten, even geduld. De resultaten worden zodadelijk verstuurd")
-    # Use read_retry method. This will retry up to 15 times to
-    # get a sensor reading (waiting 2 seconds between each retry).
+    """Bij dit commando wordt de temperatuur en luchtvochtigheid opgemeten."""
+    await ctx.send('De temperatuur en luchtvochtigheid worden gemeten, even geduld. De resultaten worden zodadelijk verstuurd')
     humidity, temperature = Adafruit_DHT.read_retry(dht_sensor, gpio)
-    # Reading the DHT11 is very sensitive to timings and occasionally
-    # the Pi might fail to get a valid reading. So check if readings are valid.
     if humidity is not None and temperature is not None:
-        print('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(temperature, humidity))
-        await ctx.send("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(temperature, humidity))
+        await ctx.send('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(temperature, humidity))
     else:
-        print('Ai, er ging iets mis bij het uitvoeren van de meting. Probeer het even opnieuw.')
+        await ctx.send('Ai, er ging iets mis bij het uitvoeren van de meting. Probeer het even opnieuw.')
+
+@bot.command()
+async def schakelaar(ctx, switch : str):
+    """Bij dit commando wordt de relais aan en uit gezet."""
+    if switch == 'Gesloten':
+        print('RELAIS Gesloten')
+        await ctx.send('RELAIS Gesloten')
+    elif switch == 'Open':
+        print('RELAIS Open')
+        await ctx.send("RELAIS Open")
+    else:
+        print('Commando niet herkend: gebruik Gesloten/Open')
+        await ctx.send('Commando niet herkend: gebruik Gesloten/Open')
 
 bot.loop.create_task(motionDetection())
 bot.run(TOKEN)
