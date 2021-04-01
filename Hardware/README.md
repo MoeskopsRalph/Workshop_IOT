@@ -11,7 +11,7 @@ In onderstaande tabel staan de benodigdheden om de Raspberry PI zelf te kunnen g
 | Raspberry Camera 				 	| 1		                     | [Raspberry Camera](https://www.amazon.nl/AZDelivery-Camera-compatibel-Raspberry-Inclusief/dp/B01M6UCEM5/ref=sr_1_57)  |
 | Micro usb adapter 				 	| 1		                     | [Adapter](https://www.amazon.nl/ghfcffdghrdshdfh-Supply-Charger-schakelaar-Raspberry/dp/B07W5VKZQZ/ref=sr_1_1)  |
 
-In deze tweede tabel staan alle hardware comonenten opgesomd die gesoldeerd moeten worden op het PCB. Ook hier is een bestellink voorzien naar de artikelen maar je kan uitraard ook deze componenten bestellen bij een verkoper naar keuze. De [zip file](./Hardware/PCB.zip) bevat alle gerber files die je nodig hebt om het PCB te bestellen bij een PCB-fabrikant (bv. [JLC PCB](https://jlcpcb.com/)). Om de PCB te bestelllen kan je gewoon rechtstreeks de zip file uploaden. Hou er wel rekening mee dat je een soldeerbout en tin ter beschiking moet hebben om alles te solderen.
+In deze tweede tabel staan alle hardware comonenten opgesomd die gesoldeerd moeten worden op het PCB. Ook hier is een bestellink voorzien naar de artikelen maar je kan uitraard ook deze componenten bestellen bij een verkoper naar keuze. De [zip file](./PCB.zip) bevat alle gerber files die je nodig hebt om het PCB te bestellen bij een PCB-fabrikant (bv. [JLC PCB](https://jlcpcb.com/)). Om de PCB te bestelllen kan je gewoon rechtstreeks de zip file uploaden. Hou er wel rekening mee dat je een soldeerbout en tin ter beschiking moet hebben om alles te solderen.
 
 | Artikel		               		            | Aantal 	                 | Bestellink	       	|
 |-----------------------------------------|--------------------------|----------------------|
