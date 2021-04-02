@@ -26,7 +26,9 @@ GPIO.setup(pir_sensor, GPIO.IN, GPIO.PUD_DOWN) #voor ruis weg te werken
 current_state = 0
 
 #RELAIS declareren
-#GPIO21
+gpio2 = 21
+gesloten = 0
+GPIO.setup(gpio2,GPIO.OUT)
 
 #CAMERA declaren + functie
 camera = PiCamera()
@@ -101,12 +103,22 @@ async def meting(ctx):
 @bot.command()
 async def schakelaar(ctx, switch : str):
     """Bij dit commando wordt de relais aan en uit gezet."""
-    if switch == 'Gesloten':
+    if switch == 'Gesloten' and gesloten == 0:
+        GPIO.output(gpio2,GPIO.HIGH)
+        gesloten = 1
         print('RELAIS Gesloten')
         await ctx.send('RELAIS Gesloten')
-    elif switch == 'Open':
+    elif switch == 'Open' and gesloten == 1:
+        GPIO.output(gpio2,GPIO.LOW)
+        gesloten = 0
         print('RELAIS Open')
         await ctx.send("RELAIS Open")
+    elif switch == 'Gesloten' and gesloten == 1:
+        print('RELAIS Is Al Gesloten!')
+        await ctx.send("RELAIS Open!")
+    elif switch == 'Open' and gesloten == 0:
+        print('RELAIS Is Al Open!')
+        await ctx.send("RELAIS Is Al Open!")
     else:
         print('Commando niet herkend: gebruik Gesloten/Open')
         await ctx.send('Commando niet herkend: gebruik Gesloten/Open')
