@@ -103,6 +103,7 @@ async def meting(ctx):
 @bot.command()
 async def schakelaar(ctx, switch : str):
     """Bij dit commando wordt de relais aan en uit gezet."""
+    globaal gesloten
     if switch == 'Gesloten' and gesloten == 0:
         GPIO.output(gpio2,GPIO.HIGH)
         gesloten = 1
