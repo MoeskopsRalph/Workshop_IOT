@@ -73,16 +73,15 @@ Surf naar https://discordapp.com/oauth2/authorize?client_id=clientid&scope=bot&p
 
 ![Deel2_5](/Documentatie/Afbeeldingen/Deel2_5.jpg)
 
-Je moet eventueel nog bevestigen dat je geen Robot bent. Als je dit gedaan hebt zie je normaal op de server nu de Bot staan die je hebt toegevoegd. Het enige wat we nu nog nodig hebben is de server-ID. Ga hiervoor eerst naar de gebruikersinstellingen (1).
+Je moet eventueel nog bevestigen dat je geen Robot bent. Als je dit gedaan hebt zie je normaal op de server nu de Bot staan die je hebt toegevoegd. Het enige wat we nu nog nodig hebben is het channel-ID. Ga hiervoor eerst naar de gebruikersinstellingen (1).
 
 ![Deel2_6](/Documentatie/Afbeeldingen/Deel2_6.jpg)
- 
- 
+  
 Scrol nu in de linkerbalk naar beneden en kies voor weergave (1). Activeer nu de ontwikkelaarsmodus (2).
 
 ![Deel2_7](/Documentatie/Afbeeldingen/Deel2_7.jpg)
 
-Klik ten slotte rechts op de servernaam (1) en Kopieer ID (2).
+Klik ten slotte rechts op de kanaalnaam (1) en Kopieer ID (2).
 
 ![Deel2_8](/Documentatie/Afbeeldingen/Deel2_8.jpg)
 
