@@ -24,6 +24,7 @@ GPIO.setwarnings(False)
 pir_sensor = 24 #GPIO voor pir sensor
 GPIO.setup(pir_sensor, GPIO.IN, GPIO.PUD_DOWN) #voor ruis weg te werken
 current_state = 0
+alarmActief = 0
 
 #RELAIS declareren
 gpio2 = 21
@@ -33,10 +34,10 @@ GPIO.setup(gpio2,GPIO.OUT)
 #CAMERA declaren + functie
 camera = PiCamera()
 camera.resolution = (640,480)
-def convert_video(file_h264, file_mp4):
-    # Opnemen 3 seconde video
+def convert_video(file_h264, file_mp4, lengteVideo):
+    # Opnemen gekozen lengte (lengteVideo)
     camera.start_recording(file_h264)
-    time.sleep(3)
+    time.sleep(lengteVideo)
     camera.stop_recording()
     # Omzetten h264 formaat naa mp4 formaat
     command = "MP4Box -add " + file_h264 + " " + file_mp4
@@ -46,25 +47,26 @@ def convert_video(file_h264, file_mp4):
 #Stuurt "motion detected" bij beweging
 async def motionDetection():
     await bot.wait_until_ready()
-    channel = bot.get_channel(823209053072523287) # replace with channel ID that you want to send to
+    channel = bot.get_channel(CHANNEL) # replace with channel ID that you want to send to
     msg_sent = False
 
     while True:
         try:
-            time.sleep(0.1)
-            current_state = GPIO.input(pir_sensor)
-            if current_state == 1:
-                if not msg_sent:
-                    await channel.send('Motion Detected')
-                    convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4')
-                    await channel.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.mp4'))
-                    commando = "rm " +"/home/pi/Desktop/IOT_Workshop/video.mp4"
-                    call([commando], shell=True)
-                    msg_sent = True
-                else:
-                    msg_sent = False
-                #print("GPIO pin %s is %s" % (pir_sensor, current_state)) # motion detected
-                time.sleep(4) # wait 4 seconds for PIR to reset.
+            if alarmActief == 1:
+                time.sleep(0.1)
+                current_state = GPIO.input(pir_sensor)
+                if current_state == 1:
+                    if not msg_sent:
+                        await channel.send('Beweging gedetecteerd')
+                        convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4', 5)
+                        await channel.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.mp4'))
+                        commando = "rm " +"/home/pi/Desktop/IOT_Workshop/video.mp4"
+                        call([commando], shell=True)
+                        msg_sent = True
+                    else:
+                        msg_sent = False
+                    #print("GPIO pin %s is %s" % (pir_sensor, current_state)) # motion detected
+                    time.sleep(4) # wait 4 seconds for PIR to reset.
         except KeyboardInterrupt:
             GPIO.cleanup()
         await asyncio.sleep(1)
@@ -78,21 +80,38 @@ async def on_ready():
 
 @bot.command()
 async def foto(ctx):
-    """Bij dit commando wordt er een foto gemaakt en doorgestuurd."""
+    """Er wordt foto gemaakt en doorgestuurd."""
     camera.capture('/home/pi/Desktop/IOT_Workshop/image.jpg')
     await ctx.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/image.jpg'))
     
 @bot.command()
 async def video(ctx):
-    """Bij dit commando wordt er een video van 3 seconden gemaakt en doorgestuurd."""
-    convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4')
+    """Er wordt een video van 3 seconden gemaakt en doorgestuurd."""
+    convert_video('/home/pi/Desktop/IOT_Workshop/video.h264', '/home/pi/Desktop/IOT_Workshop/video.mp4', 3)
     await ctx.send(file=discord.File('/home/pi/Desktop/IOT_Workshop/video.mp4'))
     commando = "rm " +"/home/pi/Desktop/IOT_Workshop/video.mp4"
     call([commando], shell=True)
 
 @bot.command()
+async def beveiliging(ctx, alarm : str):
+    """Het alarm wordt aan en uit gezet."""
+    global alarmActief
+    if alarm == 'Aan' and alarmActief == 0:
+        alarmActief = 1
+        await ctx.send('Alarm wordt ingeschakeld')
+    elif alarm == 'Uit' and alarmActief == 1:
+        alarmActief = 0
+        await ctx.send("Alarm wordt uitgeschakeld")
+    elif alarm == 'Aan' and alarmActief == 1:
+        await ctx.send('Alarm is al ingeschakeld')
+    elif alarm == 'Uit' and alarmActief == 0:
+        await ctx.send('Alarm is al uitgeschakeld')
+    else:
+        await ctx.send('Commando niet herkend: gebruik Aan/Uit')
+
+@bot.command()
 async def meting(ctx):
-    """Bij dit commando wordt de temperatuur en luchtvochtigheid opgemeten."""
+    """De temperatuur en luchtvochtigheid worden opgemeten."""
     await ctx.send('De temperatuur en luchtvochtigheid worden gemeten, even geduld. De resultaten worden zodadelijk verstuurd')
     humidity, temperature = Adafruit_DHT.read_retry(dht_sensor, gpio)
     if humidity is not None and temperature is not None:
@@ -102,7 +121,7 @@ async def meting(ctx):
 
 @bot.command()
 async def schakelaar(ctx, switch : str):
-    """Bij dit commando wordt de relais aan en uit gezet."""
+    """De relais wordt aan en uit gezet."""
     global gesloten
     if switch == 'Gesloten' and gesloten == 0:
         GPIO.output(gpio2,GPIO.HIGH)
@@ -117,7 +136,6 @@ async def schakelaar(ctx, switch : str):
     elif switch == 'Open' and gesloten == 0:
         await ctx.send("RELAIS Is Al Open!")
     else:
-        print('Commando niet herkend: gebruik Gesloten/Open')
         await ctx.send('Commando niet herkend: gebruik Gesloten/Open')
 
 bot.loop.create_task(motionDetection())
