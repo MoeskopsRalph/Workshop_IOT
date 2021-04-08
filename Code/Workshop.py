@@ -16,7 +16,6 @@ bot = commands.Bot(command_prefix='?', description=description)
 
 #DHT declareren
 dht_sensor = Adafruit_DHT.DHT11
-gesloten = 0
 gpio = 18 #GPIO voor dht sensor
 
 #PIR declareren
