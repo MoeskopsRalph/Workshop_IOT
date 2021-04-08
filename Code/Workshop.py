@@ -27,7 +27,7 @@ current_state = 0
 
 #RELAIS declareren
 gpio2 = 21
-gesloten = 0
+gesloten = 3
 GPIO.setup(gpio2,GPIO.OUT)
 
 #CAMERA declaren + functie
