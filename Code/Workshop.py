@@ -27,7 +27,7 @@ current_state = 0
 
 #RELAIS declareren
 gpio2 = 21
-gesloten = 3
+gesloten = 0
 GPIO.setup(gpio2,GPIO.OUT)
 
 #CAMERA declaren + functie
@@ -107,18 +107,14 @@ async def schakelaar(ctx, switch : str):
     if switch == 'Gesloten' and gesloten == 0:
         GPIO.output(gpio2,GPIO.HIGH)
         gesloten = 1
-        print('RELAIS Gesloten')
         await ctx.send('RELAIS Gesloten')
     elif switch == 'Open' and gesloten == 1:
         GPIO.output(gpio2,GPIO.LOW)
         gesloten = 0
-        print('RELAIS Open')
         await ctx.send("RELAIS Open")
     elif switch == 'Gesloten' and gesloten == 1:
-        print('RELAIS Is Al Gesloten!')
-        await ctx.send("RELAIS Open!")
+        await ctx.send('RELAIS Is Al Gesloten!')
     elif switch == 'Open' and gesloten == 0:
-        print('RELAIS Is Al Open!')
         await ctx.send("RELAIS Is Al Open!")
     else:
         print('Commando niet herkend: gebruik Gesloten/Open')
