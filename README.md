@@ -100,4 +100,3 @@ wget -q https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/Workshop.py 
 4. „Getting started with the Camera Module” Projects RaspberryPi. [Online]. Available: https://projects.raspberrypi.org/en/projects/getting-started-with-picamera. [Geopend 10 Maart 2021].
 5. „The parent detector” Projects RaspberryPi. [Online]. Available: https://projects.raspberrypi.org/en/projects/parent-detector/3. [Geopend 15 Maart 2021].
 6. „Discordpy Readthedoc” Discord. [Online]. Available: https://discordpy.readthedocs.io/en/stable/. [Geopend 9 April 2021].
-7. 
