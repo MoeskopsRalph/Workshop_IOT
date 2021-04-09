@@ -9,8 +9,11 @@ import Adafruit_DHT
 from subprocess import call 
 from picamera import PiCamera, Color
 
+#Variabele voor token en channel_ID
+TOKEN = 'PlaatsTokenHier'
+CHANNEL_ID = PlaatsChannel_IdHier
+
 #Toegang token voor discord server
-TOKEN = 'TOKEN'
 description = '''IOT Workshop - Discord Bot'''
 bot = commands.Bot(command_prefix='?', description=description)
 
@@ -47,7 +50,7 @@ def convert_video(file_h264, file_mp4, lengteVideo):
 #Stuurt "motion detected" bij beweging
 async def motionDetection():
     await bot.wait_until_ready()
-    channel = bot.get_channel(CHANNEL) # replace with channel ID that you want to send to
+    channel = bot.get_channel(CHANNEL_ID) 
     msg_sent = False
 
     while True:
@@ -94,7 +97,7 @@ async def video(ctx):
 
 @bot.command()
 async def beveiliging(ctx, alarm : str):
-    """Het alarm wordt aan en uit gezet."""
+    """Het alarm wordt aan en uit gezet (Aan/Uit)."""
     global alarmActief
     if alarm == 'Aan' and alarmActief == 0:
         alarmActief = 1
@@ -112,7 +115,7 @@ async def beveiliging(ctx, alarm : str):
 @bot.command()
 async def meting(ctx):
     """De temperatuur en luchtvochtigheid worden opgemeten."""
-    await ctx.send('De temperatuur en luchtvochtigheid worden gemeten, even geduld. De resultaten worden zodadelijk verstuurd')
+    await ctx.send('De temperatuur en luchtvochtigheid worden gemeten, even geduld. De resultaten worden zodadelijk verstuurd.')
     humidity, temperature = Adafruit_DHT.read_retry(dht_sensor, gpio)
     if humidity is not None and temperature is not None:
         await ctx.send('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(temperature, humidity))
@@ -121,7 +124,7 @@ async def meting(ctx):
 
 @bot.command()
 async def schakelaar(ctx, switch : str):
-    """De relais wordt aan en uit gezet."""
+    """De relais wordt aan en uit gezet (Gesloten/Open)."""
     global gesloten
     if switch == 'Gesloten' and gesloten == 0:
         GPIO.output(gpio2,GPIO.HIGH)
