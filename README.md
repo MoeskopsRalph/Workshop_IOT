@@ -99,4 +99,4 @@ wget -q https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/Workshop.py 
 3. „DHT11 Temperature and Humidity Sensor and the Raspberry Pi” The Ginger Ninja, 21 September 2017. [Online]. Available: https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi. [Geopend 28 Februari 2021].
 4. „Getting started with the Camera Module” Projects RaspberryPi. [Online]. Available: https://projects.raspberrypi.org/en/projects/getting-started-with-picamera. [Geopend 10 Maart 2021].
 5. „The parent detector” Projects RaspberryPi. [Online]. Available: https://projects.raspberrypi.org/en/projects/parent-detector/3. [Geopend 15 Maart 2021].
-6. „Discordpy Readthedoc” Discord. [Online]. Available: https://discordpy.readthedocs.io/en/stable/. [Geopend 9 April 2021].
+6. „Discordpy Readthedoc” Discord. [Online]. Available: https://discordpy.readthedocs.io/en/stable. [Geopend 9 April 2021].
