@@ -97,21 +97,21 @@ async def video(ctx):
 
 @bot.command()
 async def beveiliging(ctx, alarm : str):
-    """Het alarm wordt aan en uit gezet (Aan/Uit)."""
+    """Het alarm wordt aan en uit gezet (aan/uit)."""
     alarm = alarm.lower()
     global alarmActief
-    if alarm == 'Aan' and alarmActief == 0:
+    if alarm == 'aan' and alarmActief == 0:
         alarmActief = 1
         await ctx.send('Alarm wordt ingeschakeld')
-    elif alarm == 'Uit' and alarmActief == 1:
+    elif alarm == 'uit' and alarmActief == 1:
         alarmActief = 0
         await ctx.send("Alarm wordt uitgeschakeld")
-    elif alarm == 'Aan' and alarmActief == 1:
+    elif alarm == 'aan' and alarmActief == 1:
         await ctx.send('Alarm is al ingeschakeld')
-    elif alarm == 'Uit' and alarmActief == 0:
+    elif alarm == 'uit' and alarmActief == 0:
         await ctx.send('Alarm is al uitgeschakeld')
     else:
-        await ctx.send('Commando niet herkend: gebruik Aan/Uit')
+        await ctx.send('Commando niet herkend: gebruik aan/uit')
 
 @bot.command()
 async def meting(ctx):
@@ -125,23 +125,23 @@ async def meting(ctx):
 
 @bot.command()
 async def schakelaar(ctx, switch : str):
-    """De relais wordt aan en uit gezet (Gesloten/Open)."""
+    """De relais wordt aan en uit gezet (gesloten/open)."""
     switch = switch.lower()
     global gesloten
-    if switch == 'Gesloten' and gesloten == 0:
+    if switch == 'gesloten' and gesloten == 0:
         GPIO.output(gpio2,GPIO.HIGH)
         gesloten = 1
         await ctx.send('RELAIS Gesloten')
-    elif switch == 'Open' and gesloten == 1:
+    elif switch == 'open' and gesloten == 1:
         GPIO.output(gpio2,GPIO.LOW)
         gesloten = 0
         await ctx.send("RELAIS Open")
-    elif switch == 'Gesloten' and gesloten == 1:
+    elif switch == 'gesloten' and gesloten == 1:
         await ctx.send('RELAIS Is Al Gesloten!')
-    elif switch == 'Open' and gesloten == 0:
+    elif switch == 'open' and gesloten == 0:
         await ctx.send("RELAIS Is Al Open!")
     else:
-        await ctx.send('Commando niet herkend: gebruik Gesloten/Open')
+        await ctx.send('Commando niet herkend: gebruik gesloten/open')
 
 bot.loop.create_task(motionDetection())
 bot.run(TOKEN)
