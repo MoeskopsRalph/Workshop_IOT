@@ -98,6 +98,7 @@ async def video(ctx):
 @bot.command()
 async def beveiliging(ctx, alarm : str):
     """Het alarm wordt aan en uit gezet (Aan/Uit)."""
+    alarm = alarm.lower()
     global alarmActief
     if alarm == 'Aan' and alarmActief == 0:
         alarmActief = 1
@@ -125,6 +126,7 @@ async def meting(ctx):
 @bot.command()
 async def schakelaar(ctx, switch : str):
     """De relais wordt aan en uit gezet (Gesloten/Open)."""
+    switch = switch.lower()
     global gesloten
     if switch == 'Gesloten' and gesloten == 0:
         GPIO.output(gpio2,GPIO.HIGH)
