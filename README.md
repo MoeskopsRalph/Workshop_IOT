@@ -146,9 +146,9 @@ Als je nu een melding krijgt in de terminal zoals hieronder is de bot correct ge
 
 ![Deel3_6](/Documentatie/Afbeeldingen/Deel3_6.jpg)
 
-Probeer nu in je Discord kanaal ?help te sturen. Als je nu een info blok als reactie teruggestuurd krijgt is de code succesvol uitgevoerd. Druk nu in putty ctrl+c in om de code te laten stoppen met uitvoeren.
+Probeer nu in je Discord kanaal ```?help``` te sturen. Als je nu een info blok als reactie teruggestuurd krijgt is de code succesvol uitgevoerd. Druk nu in putty ```ctrl+c``` in om de code te laten stoppen met uitvoeren.
 
-Alles is nu klaar om verder te programmeren. Lees nu de [wiki pagina's]((./Hardware/wiki) waar de Workshop opgedeeld is in verschillende deel programmeer opdrachten.
+Alles is nu klaar om verder te programmeren. Lees nu de [wiki pagina's](./Hardware/wiki) waar de Workshop opgedeeld is in verschillende deel programmeer opdrachten.
 
 ## Referenties
 1. „Introducing Raspberry Pi Imager, our new imaging utility” RaspberryPi, 5 Maart 2020. [Online]. Available: https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility. [Geopend 30 Maart 2021].
