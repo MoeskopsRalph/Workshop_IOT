@@ -77,8 +77,7 @@ Je moet eventueel nog bevestigen dat je geen Robot bent. Als je dit gedaan hebt 
 
 ![Deel2_6](/Documentatie/Afbeeldingen/Deel2_6.jpg)
   
-Scrol nu in de linkerbalk naar beneden en kies voor weergave (1). Activeer nu de ontwikkelaarsmodus (2).
-
+Scrol nu in de linkerbalk naar beneden en kies voor weergave (1). Activeer nu de ontwikkelaarsmodus (2). Staat je Discord ingesteld in het Engels, kies dan eerst voor Advanced (1) en activeer daarna Developer Mode (2).
 ![Deel2_7](/Documentatie/Afbeeldingen/Deel2_7.jpg)
 ![Deel2_8](/Documentatie/Afbeeldingen/Deel2_8.jpg)
 
