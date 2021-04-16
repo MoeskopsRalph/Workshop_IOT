@@ -32,7 +32,7 @@ Als je de workshop volgt tijdens de demo of als je in Stap1.1 voor een image gek
 
 ### 1.3: Raspberry PI Zero instellen via script
 
-**Als je in stap 1.1 koos om de instalatie uit te voeren met het script moet je deze stap nog volgen. Volg je de workshop tijdens de demo of heb je de voorgeconfigureerde image gebruikt? Dan kan je deze stap overslaan.**
+**Als je in stap 1.1 koos om de instalatie uit te voeren met het script moet je deze stap nog volgen. Heb je de voorgeconfigureerde image gebruikt? Dan kan je deze stap overslaan.**
 
 Open de terminal op de Raspberry PI door op het terminal icoontje te klikken of door gebruik te maken van de sneltots ctrl+alt+t
 
