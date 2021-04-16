@@ -98,6 +98,20 @@ Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de 
 ## Deel 3: Schrijven code
 Nu alles ingesteld is kan begonnen worden met het schrijven van de code. Om dit te doen gebruiken we een laptop met daarop de code editor [nothepad++](https://notepad-plus-plus.org/downloads/), [filezilla](https://filezilla-project.org/download.php?show_all=1) om de code te kunnen bewerken die op de Raspberry geplaatst is en [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) om de commando's door te sturen naar de Raspberry (dan is een scherm, toetsenbord en muis op de Raspberry niet meer nodig). Volg je de workshop van thuis? Installeer de programma's dan door op de namen van de programma's hierboven te klikken. Tijdens de workshop demo zijn de programma's reed geïnstalleerd en kan je dus direct verder gaan.
 
+Wanneer je nu Putty opent kijg je normaal een scherm te zien zoals hieronder weergegeven. Geef eerst het IP-adres in (1). Dit is het adres waarop de Raspberry zit binnen het netwerk. Als je de workshop van thuis volgt is dit het adres wat je onder stap 1.2 genoteerd hebt. Volge je de workshop tijdens de demo? Gebruik dan het IP adres wat tijdens de demo vermeld wordt. Als je dit adres hebt ingegeven kies je voor Open (2).
+
+![Deel3_1](/Documentatie/Afbeeldingen/Deel3_1.jpg)
+
+In de terminal zal je nu moeten inloggen. Als je niets aangepast hebt aan de inloggegevens zijn deze standaard als volgt:
+- login as: **pi**
+- password: **Raspberry**
+
+Als je onderstaand bericht in de terminal ziet verschijnen betekent dit dat je succescol ingelogd bent.
+```bash
+pi@raspberrypi:~ $
+```
+
+Het is nu de bedoeling om de start code de downloaden op de Raspberry zodat hier verder aan gewerkt kan worden. Kopieer het commando hier en plak dit in de de putty terminal (in Putty kan je iets plakken door op je rechter muisknop te klikken).
 ```bash
 wget -q https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/Workshop.py -O ~/Desktop/IOT_Workshop/Workshop.py
 ```
