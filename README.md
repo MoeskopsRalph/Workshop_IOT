@@ -96,7 +96,7 @@ Klik ten slotte rechts op de kanaalnaam (1) en Kopieer ID (2).
 Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de server vanaf de Raspberry PI (sla deze bevoorbeeld op in een text bestand op je pc). Deel2 is nu volledig afgerond en je kan verder gaan met Deel3.
 
 ## Deel 3: Schrijven code
-Nu alles ingesteld is kan begonnen worden met het schrijven van de code. Om dit te doen gebruiken we een laptop met daarop de code editor [nothepad++](https://notepad-plus-plus.org/downloads/), [filezilla](https://filezilla-project.org/download.php?show_all=1) om de code te kunnen bewerken die op de Raspberry geplaatst is en [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) om de commando's door te sturen naar de Raspberry (dan is een scherm, toetsenbord en muis op de Raspberry niet meer nodig). Volg je de workshop van thuis? Installeer de programma's dan door op de namen van de programma's hierboven te klikken. Tijdens de workshop demo zijn de programma's reed geïnstalleerd en kan je dus direct verder gaan.
+Nu alles ingesteld is kan begonnen worden met het schrijven van de code. Om dit te doen gebruiken we een laptop met daarop de code editor [nothepad++](https://notepad-plus-plus.org/downloads/), [WinSCP](https://winscp.net/eng/download.php) om de code te kunnen bewerken die op de Raspberry geplaatst is en [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) om de commando's door te sturen naar de Raspberry (dan is een scherm, toetsenbord en muis op de Raspberry niet meer nodig). Volg je de workshop van thuis? Installeer de programma's dan door op de namen van de programma's hierboven te klikken. Tijdens de workshop demo zijn de programma's reed geïnstalleerd en kan je dus direct verder gaan.
 
 Wanneer je nu Putty opent kijg je normaal een scherm te zien zoals hieronder weergegeven. Geef eerst het IP-adres in (1). Dit is het adres waarop de Raspberry zit binnen het netwerk. Als je de workshop van thuis volgt is dit het adres wat je onder stap 1.2 genoteerd hebt. Volge je de workshop tijdens de demo? Gebruik dan het IP adres wat tijdens de demo vermeld wordt. Als je dit adres hebt ingegeven kies je voor Open (2).
 
@@ -106,7 +106,7 @@ In de terminal zal je nu moeten inloggen. Als je niets aangepast hebt aan de inl
 - login as: **pi**
 - password: **Raspberry**
 
-Als je onderstaand bericht in de terminal ziet verschijnen betekent dit dat je succescol ingelogd bent.
+Als je na het inloggen een veiligheidsmeling krijgt, beantwoordt deze dan met "Ja". Als nu onderstaand bericht in de terminal verschijnt ben je succescol ingelogd.
 ```bash
 pi@raspberrypi:~ $
 ```
@@ -116,6 +116,18 @@ Het is nu de bedoeling om de start code de downloaden op de Raspberry zodat hier
 wget -q https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/Workshop.py -O ~/Desktop/IOT_Workshop/Workshop.py
 ```
 
+Ga nu naar WinSCP en log in met en start een nieuwe sessie (1) en kies voor Nieuwe site (2). Gebruik nu dezelfde inloggegevens als de gegevens om in te loggen op Putty. Plaatst het IP adres (3), de gebruikersnaam (4) en het wachtwoord (5). Kies ten slotte voor inloggen (6).
+![Deel3_2](/Documentatie/Afbeeldingen/Deel3_2.jpg)
+
+Als je de eerste keer inlogt op de Raspberry zal er een veiligheidsmelding komen. Antwoord hierop met Ja (1).
+![Deel3_3](/Documentatie/Afbeeldingen/Deel3_3.jpg)
+
+Aan de rechterzijde worden nu de systeemmappen van de Raspberry weergegeven. Navigeer nu naar "/home/pi/Desktop/IOT_Workshop/" (1) en selecteer klik met de rechter muisknop op de file Workshop.py (2). Kies voor Bewerken (3) en Nothepad++(4) (Staat Nothepad++ er niet tussen? Voeg deze dan toe met Configureren.). Nu zal de code openen in Nothepad++ en deze kan nu vanaf hier bewerkt worden. Elke keer dat je iets aanpast in de code moet je deze opslaan in Nothepad++. Als je dit gedaan hebt is de code ook meteen opgeslagen op de 
+Raspberry en kan deze hier uitgevoerd worden.
+
+![Deel3_4](/Documentatie/Afbeeldingen/Deel3_4.jpg)
+
+Om de code nu uit te voeren gaan we terug naar Putty. 
 
 ## Referenties
 1. „Introducing Raspberry Pi Imager, our new imaging utility” RaspberryPi, 5 Maart 2020. [Online]. Available: https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility. [Geopend 30 Maart 2021].
