@@ -11,7 +11,14 @@ Om het project te kunnen bouwen moet het Raspberry PI operating system geïnstal
 
 Raadpleeg voor meer informatie over hoe de image te installeren de [website van Raspberry](https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility/). 
 
-Wanneer je de melding krijgt dat het schrijven van de image succesvol afgerond is mag je de kaart verwijderen uit je PC en in de Raspberry PI Zero plaatsen. Sluit vervolgens het toetsenbord, muis, camera, HDMI scherm en de sensoren aan (bouw je de workshop van thuis lees dan [hier](./Hardware/README.md) de hardware vereisten). Stap 1.1 is nu succesvol afgerond. Je kan nu verder gaan met stap 1.2.
+Wanneer je de melding krijgt dat het schrijven van de image succesvol afgerond is mag je de kaart verwijderen uit je PC en in de Raspberry PI Zero plaatsen. Sluit vervolgens het toetsenbord, muis, camera, HDMI scherm aan.
+
+Sluit ook de sensoren aan (bouw je de workshop van thuis lees dan [hier](./Hardware/README.md) de hardware vereisten). 
+Hieronder in het filmpje kan je bekijken hoe de hardware aangesloten moet worden:
+
+https://user-images.githubusercontent.com/61419261/115016198-0e3bc780-9eb5-11eb-883a-3f4bcf8660c9.mp4
+
+Stap 1.1 is nu succesvol afgerond. Je kan nu verder gaan met stap 1.2.
 
 ### 1.2: Raspberry PI Zero verbinden met wifi en noteren IP-adres
 
@@ -61,7 +68,7 @@ Nu de applicatie aangemaakt is kies je voor Bot (1), dan voor Add Bot (2) en ten
 
 ![Deel2_2](/Documentatie/Afbeeldingen/Deel2_2.jpg)
 
-Nu de bot aangemaakt is kan je de Token kopiëren (1). Bewaar deze ergens want we hebben deze straks nodig om toegang te krijgen tot de bot met de Raspberry PI.
+Nu de bot aangemaakt is kan je de Token kopiëren (1). Bewaar deze ergens want we hebben deze straks nodig om toegang te krijgen tot de bot met de Raspberry PI (sla deze bevoorbeeld op in een text bestand op je pc).
 
 ![Deel2_3](/Documentatie/Afbeeldingen/Deel2_3.jpg)
 
@@ -78,6 +85,7 @@ Je moet eventueel nog bevestigen dat je geen Robot bent. Als je dit gedaan hebt 
 ![Deel2_6](/Documentatie/Afbeeldingen/Deel2_6.jpg)
   
 Scrol nu in de linkerbalk naar beneden en kies voor weergave (1). Activeer nu de ontwikkelaarsmodus (2). Staat je Discord ingesteld in het Engels, kies dan eerst voor Advanced (1) en activeer daarna Developer Mode (2).
+
 ![Deel2_7](/Documentatie/Afbeeldingen/Deel2_7.jpg)
 ![Deel2_8](/Documentatie/Afbeeldingen/Deel2_8.jpg)
 
@@ -85,9 +93,11 @@ Klik ten slotte rechts op de kanaalnaam (1) en Kopieer ID (2).
 
 ![Deel2_9](/Documentatie/Afbeeldingen/Deel2_9.jpg)
 
-Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de server vanaf de Raspberry PI. Deel2 is nu volledig afgerond en je kan verder gaan met Deel3.
+Bewaar deze ID ergens want we hebben deze straks nodig om te comuniceren met de server vanaf de Raspberry PI (sla deze bevoorbeeld op in een text bestand op je pc). Deel2 is nu volledig afgerond en je kan verder gaan met Deel3.
 
 ## Deel 3: Schrijven code
+Nu alles ingesteld is kan begonnen worden met het schrijven van de code. Om dit te doen gebruiken we een laptop met daarop de code editor [nothepad++](https://notepad-plus-plus.org/downloads/), [filezilla](https://filezilla-project.org/download.php?show_all=1) om de code te kunnen bewerken die op de Raspberry geplaatst is en [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) om de commando's door te sturen naar de Raspberry (dan is een scherm, toetsenbord en muis op de Raspberry niet meer nodig). Volg je de workshop van thuis? Installeer de programma's dan door op de namen van de programma's hierboven te klikken. Tijdens de workshop demo zijn de programma's reed geïnstalleerd en kan je dus direct verder gaan.
+
 ```bash
 wget -q https://raw.github.com/MoeskopsRalph/Workshop_IOT/main/Code/Workshop.py -O ~/Desktop/IOT_Workshop/Workshop.py
 ```
