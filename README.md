@@ -120,14 +120,35 @@ Ga nu naar WinSCP en log in met en start een nieuwe sessie (1) en kies voor Nieu
 ![Deel3_2](/Documentatie/Afbeeldingen/Deel3_2.jpg)
 
 Als je de eerste keer inlogt op de Raspberry zal er een veiligheidsmelding komen. Antwoord hierop met Ja (1).
+
 ![Deel3_3](/Documentatie/Afbeeldingen/Deel3_3.jpg)
 
-Aan de rechterzijde worden nu de systeemmappen van de Raspberry weergegeven. Navigeer nu naar "/home/pi/Desktop/IOT_Workshop/" (1) en selecteer klik met de rechter muisknop op de file Workshop.py (2). Kies voor Bewerken (3) en Nothepad++(4) (Staat Nothepad++ er niet tussen? Voeg deze dan toe met Configureren.). Nu zal de code openen in Nothepad++ en deze kan nu vanaf hier bewerkt worden. Elke keer dat je iets aanpast in de code moet je deze opslaan in Nothepad++. Als je dit gedaan hebt is de code ook meteen opgeslagen op de 
-Raspberry en kan deze hier uitgevoerd worden.
+Aan de rechterzijde worden nu de systeemmappen van de Raspberry weergegeven. Navigeer nu naar "/home/pi/Desktop/IOT_Workshop/" (1) en selecteer klik met de rechter muisknop op de file Workshop.py (2). Kies voor Bewerken (3) en Nothepad++(4) (Staat Nothepad++ er niet tussen? Voeg deze dan toe met Configureren.). Nu zal de code openen in Nothepad++ en deze kan nu vanaf hier bewerkt worden.
 
 ![Deel3_4](/Documentatie/Afbeeldingen/Deel3_4.jpg)
 
-Om de code nu uit te voeren gaan we terug naar Putty. 
+Ga nu in de code opzoek naar de TOKEN (1) en de Channel_ID (2) en pas deze aan door de gegevens die genoteerd zijn tijdens het uitvoeren van Deel 2.  Elke keer dat je iets aanpast in de code moet je deze opslaan in Nothepad++. Als je dit gedaan hebt is de code ook meteen opgeslagen op de 
+Raspberry en kan deze hier uitgevoerd worden.
+
+![Deel3_5](/Documentatie/Afbeeldingen/Deel3_5.jpg)
+
+Om de code nu uit te voeren gaan we terug naar Putty. In Putty navigeren we naar de IOT_Workshop map met onderstaand commando. (Dit moet enkel gebeuren als Putty opnieuw opgestart is of als je van map verandert bent.)
+```bash
+cd Desktop/IOT_Workshop/
+```
+
+Nu we in de juiste map zitten kunnen we de code als volgt starten:
+```bash
+python3 Workshop.py
+```
+
+Als je nu een melding krijgt in de terminal zoals hieronder is de bot correct gestart.
+
+![Deel3_6](/Documentatie/Afbeeldingen/Deel3_6.jpg)
+
+Probeer nu in je Discord kanaal ?help te sturen. Als je nu een info blok als reactie teruggestuurd krijgt is de code succesvol uitgevoerd. Druk nu in putty ctrl+c in om de code te laten stoppen met uitvoeren.
+
+Alles is nu klaar om verder te programmeren. Lees nu de [wiki pagina's]((./Hardware/wiki) waar de Workshop opgedeeld is in verschillende deel programmeer opdrachten.
 
 ## Referenties
 1. „Introducing Raspberry Pi Imager, our new imaging utility” RaspberryPi, 5 Maart 2020. [Online]. Available: https://www.raspberrypi.org/blog/raspberry-pi-imager-imaging-utility. [Geopend 30 Maart 2021].
