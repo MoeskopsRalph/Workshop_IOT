@@ -73,7 +73,7 @@ Surf naar https://discordapp.com/oauth2/authorize?client_id=clientid&scope=bot&p
 
 ![Deel2_5](/Documentatie/Afbeeldingen/Deel2_5.jpg)
 
-Je moet eventueel nog bevestigen dat je geen Robot bent. Als je dit gedaan hebt zie je normaal op de server nu de Bot staan die je hebt toegevoegd. Het enige wat we nu nog nodig hebben is het channel-ID. Ga hiervoor eerst naar de gebruikersinstellingen (1).
+Je moet eventueel nog bevestigen dat je geen Robot bent. Als je dit gedaan hebt zie je normaal op de server nu de Bot staan (ga hiervoor naar je [Discord account](https://discord.com/app)) die je hebt toegevoegd. Het enige wat we nu nog nodig hebben is het channel-ID. Ga hiervoor eerst naar de gebruikersinstellingen (1).
 
 ![Deel2_6](/Documentatie/Afbeeldingen/Deel2_6.jpg)
   
