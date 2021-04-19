@@ -76,7 +76,7 @@ Ga nu terug naar Genaral Information (1) en kies voor Copy bij de Client ID (2).
 
 ![Deel2_4](/Documentatie/Afbeeldingen/Deel2_4.jpg)
 
-Surf naar https://discordapp.com/oauth2/authorize?client_id=clientid&scope=bot&permissions=0 **en vervang clientid door jouw client id**. Kies op deze pagina aan welke server de Bot toegevoegd mag worden (1) en kies voor Autoriseren (2). Je moet wel beheersrechten heben tot deze server. (Het beste kan je voor deze test even een [nieuwe server aanmaken](https://support.discord.com/hc/nl/articles/204849977-Hoe-kan-ik-een-server-cre%C3%ABren-) op je [Discord account](https://discord.com/app).)
+Surf naar https://discordapp.com/oauth2/authorize?client_id=!CLIENTID!&scope=bot&permissions=0 **en vervang !CLIENTID! door jouw client id** (voorbeeld: is je client id 123 dan ziet je link er als volgt uit:  https://discordapp.com/oauth2/authorize?client_id=123&scope=bot&permissions=0). Kies op deze pagina aan welke server de Bot toegevoegd mag worden (1) en kies voor Autoriseren (2). Je moet wel beheersrechten heben tot deze server. (Het beste kan je voor deze test even een [nieuwe server aanmaken](https://support.discord.com/hc/nl/articles/204849977-Hoe-kan-ik-een-server-cre%C3%ABren-) op je [Discord account](https://discord.com/app).)
 
 ![Deel2_5](/Documentatie/Afbeeldingen/Deel2_5.jpg)
 
@@ -146,7 +146,7 @@ Als je nu een melding krijgt in de terminal zoals hieronder is de bot correct ge
 
 ![Deel3_6](/Documentatie/Afbeeldingen/Deel3_6.jpg)
 
-Probeer nu in je Discord kanaal ```?help``` te sturen. Als je nu een info blok als reactie teruggestuurd krijgt is de code succesvol uitgevoerd. Druk nu in putty ```ctrl+c``` in om de code te laten stoppen met uitvoeren.
+Probeer nu in je [Discord kanaal](https://discord.com/app) ```?help``` te sturen. Als je nu een info blok als reactie teruggestuurd krijgt is de code succesvol uitgevoerd. Druk nu in putty ```ctrl+c``` in om de code te laten stoppen met uitvoeren.
 
 Alles is nu klaar om verder te programmeren. Lees nu de [wiki pagina's](https://github.com/MoeskopsRalph/Workshop_IOT/wiki) waar de Workshop opgedeeld is in verschillende deel programmeer opdrachten.
 
